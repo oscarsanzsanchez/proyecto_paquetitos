@@ -1,0 +1,44 @@
+.linkEnvio {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+}
+
+.linkEnvio:hover,
+.linkEnvio:active {
+    color: #4f9da6;
+    text-decoration: none;
+}
+
+.colEnvio {
+    border: 2px solid #facf5a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#formInfo {
+    text-align: center;
+}
+
+#leerqr {
+    text-align: center;
+    border: 2px solid #cccccc;
+    padding: 1%;
+}
+
+#bloqueQR {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #facf5a;
+}
+
+#btnActualizar {
+    position: fixed;
+    bottom: 3%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {}

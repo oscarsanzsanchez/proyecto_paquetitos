@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paquetitos Contigo</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animaciones.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+
+    <div class="container-fluid" id="infoEnvio">
+        <form id="formInfo" class="mt-5" name="formInfo">
+            <div class="form-group row">
+                <div class="col-12">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fas fa-id-card"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="nombre" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-12">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fas fa-fingerprint"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="dninif" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-12">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fas fa-map-marked"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="direccion" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="input-group col-6">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fas fa-receipt"></i></div>
+                    </div>
+                    <input type="text" class="form-control" id="numEnvio" disabled>
+                </div>
+
+                <div class="input-group col-6">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fas fa-clipboard-check"></i></div>
+                    </div>
+                    <input type="text" class="form-control" id="numEnvioConfirma" disabled>
+                </div>
+            </div>
+            <div class="form-group row mt-5" id="bloqueQR">
+                <div class="col-12">
+                    <div>
+                        <p>Leer QR</p>
+                        <i class="fas fa-qrcode fa-5x" id="leerqr"></i>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="btnAtras" class="mt-5">
+            <button type="button" class="btn btn-outline-dark animated infinite pulse"><i class="fas fa-hand-point-left fa-2x"></i> &nbsp; <i class="fas fa-bars fa-2x"></i></button>
+        </div>
+    </div>
+
+    <script src="cordova.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="js/cargaUno.js"></script>
+    <script src="js/almacenar.js"></script>
+
+</body>
+
+</html>

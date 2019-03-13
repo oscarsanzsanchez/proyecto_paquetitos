@@ -1,0 +1,88 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    /*background: linear-gradient(0deg, rgba(255, 153, 102, 0.7), rgba(255, 153, 102, 0.7)), url(res/images/leone-venter-469710-unsplash.jpg);*/
+    background-color: rgba(255, 255, 255, 0.7);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    min-width: 100%;
+}
+
+.formularioCreacionEnvio {
+    /*border-top: 1px solid #ccc;*/
+    padding: 2%;
+    height: 100%;
+}
+
+.formularioCreacionEnvio__botones {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.formularioCreacionEnvio__botones .btn:not(:last-child) {
+    margin-right: 1%;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#errores {
+    display: none;
+    border: 1px solid #cf3030;
+    background-color: #ecacac;
+    color: #333333;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 2%;
+}
+
+.alertaSuccesful {
+    display: none;
+}
+
+#contenedorPrincipal {
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 100%;
+}
+
+#jumbotronArriba {
+    padding: 4%;
+    border: 1px solid rgb(71, 79, 133);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#video-background {
+    /*  making the video fullscreen  */
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 10px;
+    height: auto;
+    z-index: -100;
+}
+
+.encabezadoIntro {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.contenedorGeneralIntro {
+    display: block;
+    padding: 3%;
+    background-color: rgba(7, 7, 7, 0.7);
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 35%);
+}

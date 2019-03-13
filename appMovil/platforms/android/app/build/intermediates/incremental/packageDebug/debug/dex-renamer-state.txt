@@ -1,0 +1,4 @@
+#Sun Feb 24 12:36:05 CET 2019
+base.0=C\:\\Users\\Oscar\\Desktop\\proyectoPaquetitos\\Proyecto_Paquetitos\\appMovil\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

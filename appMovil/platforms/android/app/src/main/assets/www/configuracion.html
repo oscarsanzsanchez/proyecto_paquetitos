@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paquetitos Contigo | Configuración</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center mt-3">
+                <h2>Paquetitos Contigo | Configuración</h2>
+            </div>
+        </div>
+        <form action="configuracion.html" method="post" class="mt-5">
+            <label class="sr-only" for="serverIp">Server IP</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-server"></i></div>
+                </div>
+                <input type="text" class="form-control" id="serverIp" placeholder="Server IP">
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-outline-success btn-block mt-3" id="btnGuardar">Guardar</button>
+                </div>
+                <div class="col-6">
+                    <a class="btn btn-outline-danger btn-block mt-3" id="btnCancelar" href="index.html">Volver</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- 
+        Siempre ha de estar para que funcionen los plugins, llamadas cordova desde scripts, etc.
+         El archivo cordova.js se crea al hacer la compilación y deploy de la app al móvil.
+        -->
+    <!-- ---------------------------------------------------------------------------------- -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/cargaUno.js"></script>
+    <script src="js/almacenar.js"></script>
+</body>
+
+</html>

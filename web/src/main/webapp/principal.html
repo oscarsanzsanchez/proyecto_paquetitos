@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Creación envío | Paquetitos</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+    <!-- STYLES SHEETS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="animaciones.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="res/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="res/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="res/favicon/favicon-16x16.png">
+    <link rel="manifest" href="res/favicon/site.webmanifest">
+    <link rel="mask-icon" href="res/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<!-- HTML BODY -->
+
+<body>
+
+    <div id="contenedorPrincipal">
+        <div class="container-fluid pt-3">
+
+            <div class="col-12 text-center" id="jumbotronArriba">
+
+                <h1><img src="res/images/box.png" alt="" width="50">&nbsp;Entrada de envío | Paquetitos Express</h1>
+            </div>
+
+            <div class="col-12 text-center mb-2">
+                <div class="alert alert-success alertaSuccesful" role="alert" id="alertaSuccesful">
+                    <h4>¡Envio creado correctamente!</h4>
+                </div>
+            </div>
+            <div class="col-12 text-center mb-2 alertaSuccesful">
+                <div class="alert alert-warning" role="alert" id="alertaFail">
+                    <h4>Vaya... parece que algo ha ido mal. Prueba de nuevo en unos instantes.</h4>
+                </div>
+            </div>
+            <!-- FORMULARIO CREACIÓN DE UN ENVÍO NUEVO -->
+            <form action="/" method="POST" class="formularioCreacionEnvio" name="formularioCreacionEnvio">
+
+                <div class="row">
+                    <div class="col-2 mb-3">
+                        <h3>Datos salida</h3>
+                    </div>
+                    <div class="col-10">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-md-4 col-xs-12">
+                        <label for="seleccionarRemitente">Seleccionar cliente remitente</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-plane-departure"></i></div>
+                            </div>
+                            <select class="form-control" id="seleccionarRemitente" name="seleccionarRemitente">
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12 text-center">
+                        <label for="estadoInicial">Seleccionar estado actual</label>
+                        <p></p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="estadoInicial" id="pendienteRecogida" value="PR">
+                            <label class="form-check-label" for="pendienteRecogida">Pendiente de recogida</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="estadoInicial" id="enOficinaOrigen" value="OO">
+                            <label class="form-check-label" for="enOficinaOrigen">En oficina de origen</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <label for="seleccionarDestinatario">Seleccionar cliente destinatario</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-plane-arrival"></i></div>
+                            </div>
+                            <select class="form-control" id="seleccionarDestinatario" name="seleccionarDestinatario">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 mb-3">
+                        <h3>Datos destino</h3>
+                    </div>
+                    <div class="col-10">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-8 col-xs-12">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fas fa-file-alt"></i></div>
+                                </div>
+                                <input type="text" class="form-control" id="nombreDestinatario" name="nombreDestinatario" placeholder="Nombre destinatario">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="far fa-id-card"></i></div>
+                                </div>
+                                <input type="text" class="form-control" id="dninif" name="dninif" placeholder="DNI/NIF destinatario">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fas fa-box"></i></div>
+                                </div>
+                                <input type="text" class="form-control" id="codigoPostal" name="codigoPostal" placeholder="Código postal">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="far fa-address-book"></i></div>
+                                </div>
+                                <input type="text" class="form-control" id="direccionCompleta" name="direccionCompleta" placeholder="Direccion completa destinatario">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 formularioCreacionEnvio__botones mb-2">
+                        <button type="button" class="btn btn-outline-primary btn-block" id="btnEnviar">Enviar</button>
+                    </div>
+                    <div class="col-xs-12 col-md-6 formularioCreacionEnvio__botones mb-2">
+                        <button type="reset" class="btn btn-outline-danger btn-block" id="btnBorrar">Borrar</button>
+                    </div>
+                </div>
+            </form>
+            <!-- FORMULARIO CREACIÓN DE UN ENVÍO NUEVO -->
+            <div id="errores" class="mb-5">
+            </div>
+        </div>
+
+    </div>
+    <!-- HTML BODY -->
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/cargas.js"></script>
+</body>
+
+</html>
